@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerneFlow · Hall Management</title>
+    <!-- Font Awesome 6 (free) for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>VerneFlow</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-nav">
+                <div class="nav-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-door-open"></i>
+                    <span>Hall Management</span>
+                </div>
+                <div class="nav-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Availability</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Role Simulation</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header with Dashboard Overview -->
+            <div class="header">
+                <div class="header-top">
+                    <h1>Dashboard Overview</h1>
+                    <p class="subtitle">Real-time status and quick management tools for Computer Science Lecture Halls.</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Halls Managed</div>
+                        <div class="stat-value">7</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Active Bookings Today</div>
+                        <div class="stat-value">14</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Percentile Profits</div>
+                        <div class="stat-value">2</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Reports</div>
+                        <div class="stat-value">administration review</div>
+                        <div class="stat-dots">...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Operations -->
+            <div class="quick-ops">
+                <h2>Quick Operations</h2>
+                <div class="ops-cards">
+                    <div class="ops-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Create Booking</span>
+                    </div>
+                    <div class="ops-card">
+                        <i class="fas fa-edit"></i>
+                        <span>Manage Halls</span>
+                    </div>
+                    <div class="ops-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Check Availability</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Hall Availability -->
+            <div class="availability-section">
+                <h2>Overall Hall Availability</h2>
+                <div class="hall-grid">
+                    <div class="hall-card">
+                        <div class="hall-header">PST1</div>
+                        <div class="hall-sub">CS Block 1</div>
+                        <div class="hall-name">GRANTY</div>
+                        <div class="hall-capacity">150 Seats</div>
+                    </div>
+                    <div class="hall-card">
+                        <div class="hall-header">PST2</div>
+                        <div class="hall-sub">CS Block 2</div>
+                        <div class="hall-name">GRANTY</div>
+                        <div class="hall-capacity">100 Seats</div>
+                    </div>
+                    <div class="hall-card">
+                        <div class="hall-header">PST3</div>
+                        <div class="hall-sub">CS Block 3</div>
+                        <div class="hall-name">GRANTY</div>
+                        <div class="hall-capacity">200 Seats</div>
+                    </div>
+                    <div class="hall-card">
+                        <div class="hall-header">PST4</div>
+                        <div class="hall-sub">CS Block 4</div>
+                        <div class="hall-name">GRANTY</div>
+                        <div class="hall-capacity">120 Seats</div>
+                    </div>
+                </div>
+                <div class="advanced-algo">
+                    <strong>Advanced Algorithms</strong>
+                </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="two-col">
+                <!-- Left Column: Detailed Schedule -->
+                <div class="schedule-col">
+                    <h3>View Detailed Schedule</h3>
+                    
+                    <div class="schedule-block">
+                        <div class="block-title">PST1</div>
+                        <div class="block-detail">GRANTY: 150 Seats</div>
+                        <div class="block-detail">GRANTY: 100 Seats</div>
+                        <div class="block-detail available">GRANTY: Available</div>
+                    </div>
+                    
+                    <div class="schedule-block">
+                        <div class="block-title">PST2</div>
+                        <div class="block-detail">GRANTY: 100 Seats</div>
+                        <div class="block-detail available">GRANTY: Available</div>
+                    </div>
+
+                    <!-- Software Lab -->
+                    <div class="lab-block">
+                        <div class="lab-title">SOFTWARE LAB</div>
+                        <div class="lab-location">Main Wing, 2nd Floor</div>
+                        <div class="lab-blocks">
+                            <span>CS Block 1</span>
+                            <span>CS Block 2</span>
+                            <span>CS Block 3</span>
+                            <span>CS Block 4</span>
+                        </div>
+                        <div class="lab-course">Web Site Production</div>
+                    </div>
+
+                    <!-- Microprocessor Lab -->
+                    <div class="lab-block">
+                        <div class="lab-title">MICROPROCESSOR LAB</div>
+                        <div class="lab-location">Main Wing, 1st Floor</div>
+                        <div class="lab-blocks">
+                            <span>CS Block 1</span>
+                            <span>CS Block 2</span>
+                            <span>CS Block 3</span>
+                            <span>CS Block 4</span>
+                        </div>
+                        <div class="lab-course">Additional Stations</div>
+                    </div>
+
+                    <!-- Next Lecture -->
+                    <div class="next-lecture">
+                        <strong>Next Large Group Lecture</strong>
+                        <div>CS302: Database Systems → PST3 at 2:00 PM today</div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Hall Management Table -->
+                <div class="management-col">
+                    <div class="management-header">
+                        <h2>Hall Management</h2>
+                        <p>Maintain the inventory of lecture halls, laboratories, and specialized learning spaces.</p>
+                    </div>
+
+                    <!-- Management Stats -->
+                    <div class="management-stats">
+                        <div class="mstat">
+                            <div class="mstat-label">Total Inventory</div>
+                            <div class="mstat-value">7</div>
+                        </div>
+                        <div class="mstat">
+                            <div class="mstat-label">Average Capacity</div>
+                            <div class="mstat-value">146</div>
+                        </div>
+                        <div class="mstat">
+                            <div class="mstat-label">Operational Status</div>
+                            <div class="mstat-value">6/7</div>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search by name or building...">
+                    </div>
+
+                    <!-- Halls Table -->
+                    <div class="halls-table">
+                        <div class="table-header">
+                            <span>Name</span>
+                            <span>Building</span>
+                            <span>Capacity</span>
+                            <span>Type</span>
+                            <span>Status</span>
+                            <span>Actions</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>PST1</span>
+                            <span>Physical Sciences</span>
+                            <span>180 seats</span>
+                            <span>Lecture Hall</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>PST2</span>
+                            <span>Physical Sciences</span>
+                            <span>190 seats</span>
+                            <span>Lecture Hall</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>PST3</span>
+                            <span>Physical Sciences</span>
+                            <span>120 seats</span>
+                            <span>Lecture Hall</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>SOFTWARE LAB 1</span>
+                            <span>CS Building</span>
+                            <span>100 seats</span>
+                            <span>Laboratory</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>MICROPROCESSOR LAB</span>
+                            <span>CS Building</span>
+                            <span>180 seats</span>
+                            <span>Laboratory</span>
+                            <span class="status-maintenance">Maintenance</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>PST4</span>
+                            <span>Physical Sciences</span>
+                            <span>200 seats</span>
+                            <span>Lecture Hall</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                        
+                        <div class="table-row">
+                            <span>PST5</span>
+                            <span>Physical Sciences</span>
+                            <span>190 seats</span>
+                            <span>Lecture Hall</span>
+                            <span class="status-active">Active</span>
+                            <span class="actions">⋯</span>
+                        </div>
+                    </div>
+
+                    <div class="table-footer">
+                        Showing 7 of 7 lecture halls
+                    </div>
+
+                    <!-- Operational Guidelines -->
+                    <div class="guidelines">
+                        <h4>Operational Guidelines</h4>
+                        <p>Halls under "maintenance" status are automatically excluded from the general booking schedule. Update the status to "Active" once repairs or servicing are completed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>© 2020 VerneFlow — Computer Science Department Lecture Hall Management</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
