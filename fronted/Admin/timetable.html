@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule class</title>
+    <script src="timetable.js"></script>  
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+
+    <h1>Schedule Class</h1>
+
+    <form id="timetableForm">
+
+        <!-- Unit Dropdown -->
+        <label>Unit:</label>
+        <select id="unit" required></select>
+        <br><br>
+        <!--Lecturer Name-->
+        <label>--Lecturer:</label>
+        <select id="Lecturer name" required></select>
+        <br><br>
+        <!-- Venue Dropdown -->
+        <label>Venue:</label>
+        <select id="venue" required></select>
+        <br><br>
+
+        <!-- Day -->
+        <label>Day:</label>
+        <select id="day" required>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+        </select>
+        <br><br>
+
+        <!-- Time -->
+        <label>Start Time:</label>
+        <input type="time" id="start_time" required>
+
+        <label>End Time:</label>
+        <input type="time" id="end_time" required>
+        <br><br>
+
+        <button type="submit">Schedule</button>
+    </form>
+
+    <h2>Timetable</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Venue</th>
+                <th>Day</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="timetableTable"></tbody>
+    </table>
+
+
+</body>
+</html>
