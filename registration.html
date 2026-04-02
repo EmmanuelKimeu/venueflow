@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>VenueFlow - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="brand-container" style="justify-content: center; margin-bottom: 30px;">
+            <img src="loGo.png" alt="Egerton Logo" class="uni-logo">
+            <div class="logo-text">VenueFlow</div>
+        </div>
+        <div class="auth-card">
+            <h2>Create Account</h2>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 25px;">Join the scheduling system</p>
+            <form onsubmit="handleAuth(event, 'register')">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" placeholder="Victor Munene" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="auth-btn">Register</button>
+            </form>
+            <p class="toggle-text">Already have an account? <a href="authentication.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
