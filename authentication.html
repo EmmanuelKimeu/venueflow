@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>VenueFlow - Login</title>
+    <meta charset="UTF-8"><title>VenueFlow-Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="auth-page">
     <div class="auth-container">
+        <!-- Egerton University Branding -->
         <div class="brand-container" style="justify-content: center; margin-bottom: 30px;">
             <img src="loGo.png" alt="Egerton Logo" class="uni-logo">
             <div class="logo-text">VenueFlow</div>
         </div>
-        <div class="auth-card">
-            <h2>Lecturer Login</h2>
-            <p style="color: #64748b; font-size: 14px; margin-bottom: 25px;">Sign in to your portal</p>
+        
+        <!-- MAIN LOGIN CARD -->
+        <div id="login-card" class="auth-card">
+            <h2>Sign In</h2>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 25px; text-align: center;">Egerton University Venue Portal</p>
+            
             <form onsubmit="handleAuth(event, 'login')">
                 <div class="input-group">
                     <label>Email Address</label>
-                    <input type="email" id="login-email" placeholder="lecturer@egerton.ac.ke" required>
+                    <input type="email" id="login-email" placeholder="name@egerton.ac.ke" required>
                 </div>
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" required placeholder="••••••••">
+                    <input type="password" id="login-pass" required placeholder="••••••••">
                 </div>
                 <button type="submit" class="auth-btn">Sign In</button>
             </form>
-            <p class="toggle-text">New? <a href="registration.html">Register here</a></p>
+            <p class="toggle-text">New Student? <a href="registration.html">Register here</a></p>
+        </div>
+
+        <!-- PASSWORD UPDATE CARD (Only for Lecturers/Admins on first login) -->
+        <div id="change-pass-card" class="auth-card hidden">
+            <div style="text-align: center; color: #f59e0b; margin-bottom: 15px;">
+                <i class="fas fa-shield-alt fa-3x"></i>
+            </div>
+            <h2>Security Update</h2>
+            <p style="color: #64748b; font-size: 13px; margin-bottom: 20px;">You are using a default password. Please set a new private password to continue.</p>
+            
+            <form onsubmit="finishPasswordUpdate(event)">
+                <div class="input-group">
+                    <label>New Password</label>
+                    <input type="password" id="new-pass" required placeholder="Min 8 characters">
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirm-pass" required placeholder="Repeat password">
+                </div>
+                <button type="submit" class="auth-btn" style="background: #059669;">Update & Enter Dashboard</button>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>VenueFlow - Register</title>
+    <meta charset="UTF-8"><title>VenueFlow - Student Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="auth-page">
@@ -11,22 +11,26 @@
             <div class="logo-text">VenueFlow</div>
         </div>
         <div class="auth-card">
-            <h2>Create Account</h2>
-            <p style="color: #64748b; font-size: 14px; margin-bottom: 25px;">Join the scheduling system</p>
+            <h2>Student Sign Up</h2>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 25px;">Create your student account</p>
             <form onsubmit="handleAuth(event, 'register')">
                 <div class="input-group">
                     <label>Full Name</label>
                     <input type="text" id="reg-name" placeholder="Victor Munene" required>
                 </div>
                 <div class="input-group">
-                    <label>Email Address</label>
-                    <input type="email" required>
+                    <label>Registration Number</label>
+                    <input type="text" placeholder="S13/..." required>
                 </div>
                 <div class="input-group">
-                    <label>Password</label>
-                    <input type="password" required>
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="student@egerton.ac.ke">
                 </div>
-                <button type="submit" class="auth-btn">Register</button>
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="auth-btn">Create Account</button>
             </form>
             <p class="toggle-text">Already have an account? <a href="authentication.html">Login here</a></p>
         </div>
