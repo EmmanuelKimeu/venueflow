@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - VenueFlow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>VenueFlow</h2>
+    <a href="#users"><i class="fas fa-users"></i> Users</a>
+    <a href="#schedules"><i class="fas fa-calendar"></i> Schedules</a>
+    <a href="halls.html"><i class="fas fa-building"></i> Halls Management</a>
+    <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+        <button onclick="downloadPDF()" class="btn-primary">
+            <i class="fas fa-download"></i> Export Timetable
+        </button>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="card stat">
+            <h3>Total Users</h3>
+            <p id="totalUsers">0</p>
+        </div>
+        <div class="card stat">
+            <h3>Total Schedules</h3>
+            <p id="totalSchedules">0</p>
+        </div>
+    </div>
+
+    <!-- ADD USER -->
+    <div class="card">
+        <h3>Add User</h3>
+        <div class="form-row">
+            <input id="newName" placeholder="Full Name">
+            <input id="newEmail" placeholder="Email">
+            <input id="newPassword" type="password" placeholder="Password">
+
+            <select id="newRole">
+                <option value="student">Student</option>
+                <option value="lecturer">Lecturer</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button type="button" onclick="addUser()" class="btn-primary">Add</button>
+        </div>
+    </div>
+
+    <!-- USERS TABLE -->
+    <div class="card">
+        <h3 id="users">All Users</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable"></tbody>
+        </table>
+    </div>
+
+    <!-- SCHEDULE FORM -->
+    <div class="card">
+        <h3 id="schedules">Schedule Lecture</h3>
+
+        <form onsubmit="createSchedule(event)" class="form-row">
+            <select id="courseSelect"></select>
+            <select id="lecturerSelect"></select>
+            <select id="roomSelect"></select>
+
+            <select id="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+            </select>
+
+            <input type="time" id="startTime">
+            <input type="time" id="endTime">
+
+            <button class="btn-primary">Create</button>
+        </form>
+    </div>
+
+    <!-- TIMETABLE GRID -->
+    
+    <div class="card">
+        <div class="header">
+        <h3>Timetable</h3>
+        <button onclick="downloadPDF()" class="btn-primary">
+            <i class="fas fa-download"></i> Export Timetable
+        </button>
+        </div>
+        <div id="timetableGrid" class="grid"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

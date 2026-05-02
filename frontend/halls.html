@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hall Management - VenueFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+    <h2>VenueFlow</h2>
+    <a href="admin.html"><i class="fas fa-users"></i> Users</a>
+    <a href="admin.html"><i class="fas fa-calendar"></i> Schedules</a>
+    <a href="halls.html"><i class="fas fa-building"></i> Halls Management</a>
+    <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+<div class="main-content">
+
+    <div class="header">
+        <h1>🏢 Hall Management</h1>
+    </div>
+
+    <!-- ADD HALL -->
+    <div class="card">
+        <h3>Add New Hall</h3>
+
+        <div class="form-row">
+            <input id="hallName" placeholder="Hall Name">
+            <input id="hallBuilding" placeholder="Building">
+            <input id="hallCapacity" type="number" placeholder="Capacity">
+
+            <select id="hallType">
+                <option>Lecture Hall</option>
+                <option>Laboratory</option>
+            </select>
+
+            <select id="hallStatus">
+                <option>Active</option>
+                <option>Maintenance</option>
+            </select>
+
+            <button onclick="addHall()" class="btn-primary">Add Hall</button>
+        </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="card">
+        <input 
+            type="text" 
+            id="searchHall" 
+            placeholder="🔍 Search halls..." 
+            onkeyup="filterHalls()"
+            class="search-input"
+        >
+    </div>
+
+    <!-- HALL TABLE -->
+    <div class="card">
+        <h3>All Halls</h3>
+
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Building</th>
+                    <th>Capacity</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="hallsTable"></tbody>
+        </table>
+    </div>
+    <!-- EDIT MODAL -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <h3>Edit Hall</h3>
+
+        <input id="editName" placeholder="Hall Name">
+        <input id="editBuilding" placeholder="Building">
+        <input id="editCapacity" type="number" placeholder="Capacity">
+
+        <select id="editType">
+            <option>Lecture Hall</option>
+            <option>Laboratory</option>
+        </select>
+
+        <select id="editStatus">
+            <option>Active</option>
+            <option>Maintenance</option>
+        </select>
+
+        <div class="modal-actions">
+            <button onclick="saveHall()" class="btn-primary">Save</button>
+            <button onclick="closeModal()" class="btn-cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

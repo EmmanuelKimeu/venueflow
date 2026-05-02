@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - VenueFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+<div class="auth-card">
+    <h2>Login</h2>
+
+    <form onsubmit="login(event)">
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <button class="auth-btn">Login</button>
+    </form>
+
+    <p class="toggle-text">
+        No account? <a href="register.html">Register</a>
+    </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

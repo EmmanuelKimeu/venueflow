@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VenueFlow - Lecturer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>VenueFlow</h2>
+    <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- HEADER -->
+    <div class="header-top">
+        <h1>Lecturer Dashboard</h1>
+        <button class="btn-primary" onclick="downloadPDF()">Download Timetable PDF</button>
+    </div>
+
+    <!-- CREATE SCHEDULE -->
+    <div class="card">
+        <h3>Create Schedule</h3>
+
+        <form onsubmit="createSchedule(event)" class="form-grid">
+
+            <select id="courseSelect" required></select>
+            <select id="lecturerSelect" required></select>
+            <select id="roomSelect" required></select>
+
+            <select id="day" required>
+                <option value="">Select Day</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+            </select>
+
+            <input type="time" id="startTime" required>
+            <input type="time" id="endTime" required>
+
+            <button class="btn-primary">Create Schedule</button>
+        </form>
+    </div>
+
+    <!-- TIMETABLE GRID -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Weekly Timetable</h3>
+        </div>
+
+        <div id="timetableGrid" class="timetable-grid">
+            <!-- JS FILLS GRID -->
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
